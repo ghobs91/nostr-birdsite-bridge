@@ -1,0 +1,36 @@
+{
+  "name": "fedifinder",
+  "version": "2022.12.18",
+  "description": "Extracts fediverse handles and URLS from Twitter accounts.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "connect-ensure-login": "^0.1.1",
+    "cookie-parser": "^1.4.6",
+    "express": "^4.18.2",
+    "passport": "^0.6.0",
+    "@superfaceai/passport-twitter-oauth2": "^1.2.0",
+    "twitter-api-v2": "^1.12.10",
+    "webfinger.js": "^2.7.1",
+    "better-sqlite3": "^8.0.1",
+    "better-sqlite3-helper": "^3.1.6",
+    "cookie-session": "^2.0.0",
+    "xml2json": "^0.12.0",
+    "crypto-js": "^4.1.1",
+    "cors": "^2.8.5",
+    "nostr-tools": "^1.1.2"
+  },
+  "engines": {
+    "node": "16.x"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "twitter",
+    "oauth",
+    "passport"
+  ],
+  "license": "MIT"
+}
