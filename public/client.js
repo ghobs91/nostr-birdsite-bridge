@@ -335,7 +335,7 @@ const app = Vue.createApp({
             data.next_token && data.ratelimit_remaining > 0
               ? this.loadFollowings((next_token = data.next_token))
               : void 0;
-            const followingSnippet = data.accounts.slice(0, 500);
+            const followingSnippet = data.accounts.slice(0, 700);
             console.log('followings snippet: ', followingSnippet);
             this.getNostrProfile(followingSnippet);
           }
@@ -354,8 +354,9 @@ const app = Vue.createApp({
           })
           .then((response) => response.json())
           .then((data) => {
-              console.log("NPubKey: ", data.NPubKey);
+              // console.log("NPubKey: ", data.NPubKey);
               const snortURL = `https://snort.social/p/${data.NPubKey}`;
+              console.log(snortURL);
               element.snortURL = snortURL;
               this.nostrGeneratedProfiles.push(element)
               return data.NPubKey;

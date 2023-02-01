@@ -66,18 +66,6 @@
     </nav>
 
     <div class="section buttons is-flex-touch is-hidden-desktop">
-      <a
-        href="https://fedifinder-v1.glitch.me"
-        class="button is-light is-primary"
-      >
-        Old version
-      </a>
-      <button
-        onclick="document.getElementById('modal-about').classList.add('is-active')"
-        class="button is-light"
-      >
-        About
-      </button>
       <button
         v-if="twitter_auth"
         @click="logoff()"
@@ -154,8 +142,10 @@
         <div v-if="domains">
           <ul>
 <!--              -->
-            <li v-for="profile in nostrGeneratedProfiles">
-              <a :href="profile.snortURL"><b>{{profile.name}}:</b> (@{{profile.username}})</a>
+            <li v-for="profile in nostrGeneratedProfiles">          
+              <div class="nostr-profile-card">
+                <a :href="profile.snortURL"><b>{{profile.name}}:</b> (@{{profile.username}})</a>
+              </div>
             </li>
             <br>
 <!--              -->
