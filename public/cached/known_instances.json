@@ -1601,5 +1601,12 @@
     "software_name": "mastodon",
     "software_version": "4.0.2",
     "users_total": 34
+  },
+  "trunk.lol": {
+    "part_of_fediverse": 1,
+    "local_domain": "trunk.lol",
+    "software_name": "mastodon",
+    "software_version": "4.0.2",
+    "users_total": 4
   }
 }

@@ -355,9 +355,10 @@ const app = Vue.createApp({
           .then((response) => response.json())
           .then((data) => {
               // console.log("NPubKey: ", data.NPubKey);
-              const snortURL = `https://snort.social/p/${data.NPubKey}`;
-              console.log(snortURL);
-              element.snortURL = snortURL;
+              element.snortURL = `https://snort.social/p/${data.NPubKey}`;
+              element.irisURL = `https://iris.to/#/profile/${data.NPubKey}`;
+              element.astralURL = `https://astral.ninja/${data.NPubKey}`;
+              element.appDeepLinkURL = `nostr:${data.NPubKey}`;
               this.nostrGeneratedProfiles.push(element)
               return data.NPubKey;
           });

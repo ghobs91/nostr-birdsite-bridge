@@ -144,7 +144,17 @@
 <!--              -->
             <li v-for="profile in nostrGeneratedProfiles">          
               <div class="nostr-profile-card">
-                <a :href="profile.snortURL"><b>{{profile.name}}:</b> (@{{profile.username}})</a>
+                <h3>{{profile.name}}</h3>
+                <div class="profile-link-container">
+                  <div class="profile-link-column">
+                    <a :href="profile.snortURL">View in Snort</a>
+                    <a :href="profile.irisURL">View in Iris</a>
+                  </div>
+                  <div class="profile-link-column">
+                    <a :href="profile.astralURL">View in Astral</a>
+                    <a :href="profile.appDeepLinkURL">Open in default app</a>
+                  </div>
+                </div>
               </div>
             </li>
             <br>
